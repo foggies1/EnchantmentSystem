@@ -25,10 +25,9 @@ public class EnchantManager {
 		Player player = e.getPlayer();
 		ItemStack itemInHand = player.getInventory().getItemInMainHand();
 
-		for (Enchantment enchantment : EnchantSystem.getEnchantmentList()) {
-			if (itemHasEnchantment(itemInHand, enchantment))
-				enchantment.blockBreakHandler(e);
-		}
+		EnchantSystem.getEnchantmentList().stream()
+				.filter(enchantment -> itemHasEnchantment(itemInHand, enchantment))
+				.forEach(enchantment -> enchantment.blockBreakHandler(e));
 
 	}
 
