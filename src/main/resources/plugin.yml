@@ -1,0 +1,7 @@
+name: EnchantSystem
+version: ${project.version}
+main: xyz.foggies.enchantsystem.EnchantSystem
+api-version: 1.16
+authors: [ Foggies ]
+description: Custom enchant system designed by foggies
+website: foggies.xyz
